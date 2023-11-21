@@ -1,5 +1,5 @@
-import React from 'react'
 import './CSS/LoginSignup.css'
+import { Link } from 'react-router-dom'
 
 const LoginSignup = () => {
   return (
@@ -11,12 +11,18 @@ const LoginSignup = () => {
           <input type='email' placeholder='Email Address' />
           <input type='password' placeholder='Password' />
         </div>
+        <Link to = '/login'>
         <button>Continue</button>
-        <p className='loginSignUp-login'>Already have an account? <span>Login Here</span></p>
-        <div className='loginSignUp-agree'>
-          <input type='checkBox' name='' id='' />
-          <p>By continuing, i agree to the terms of use & privacy policy.</p>
-        </div>
+        </Link>
+        <p className='loginSignUp-login'>Already have an account?
+          <Link to='/login'>
+            <span>Login In Here</span>
+          </Link>
+          </p>
+          <div className='loginSignUp-agree'>
+            <input type='checkBox' name='' id='' />
+            <p>By continuing, i agree to the terms of use & privacy policy.</p>
+          </div>
       </div>
     </div>
   )
